@@ -16,7 +16,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -75,8 +75,10 @@ ol {
 }
 
 .content__list-container {
-  overflow-y: scroll;
+  position: relative;
+  overflow-y: auto;
   height: 298px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -112,6 +114,8 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .search-form {
@@ -131,7 +135,7 @@ ol {
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
 }
 
 .title {
@@ -139,7 +143,7 @@ ol {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  font-family: Oswald, "sans serif";
+  font-family: "Oswald", Arial, sans-serif;
 }
 
 .content__accent {
@@ -168,16 +172,21 @@ background-color: #545050;;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: Oswald;
+  font-family: "Oswald", Arial, sans-serif;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .content__video-card-description {
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  line-height: 16.2px;
 }
 
 .visually-hidden {
@@ -208,7 +217,7 @@ background-color: #545050;;
   width: 225px;
   font-size: 18px;
   letter-spacing: normal;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   color: #fff;
   background-color: transparent;
   border: none;
@@ -267,11 +276,10 @@ background-color: #545050;;
   border: 1px solid #fff;
   color: #fff;
   background-color: transparent;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
-  letter-spacing: 0.5px;
 }
 
 .button:hover {
